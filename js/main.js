@@ -135,7 +135,7 @@
 
   /* ---- Inquiry form ---- */
   // To go live: replace YOUR_FORM_ID with your real Formspree ID (see CHANGEME.md).
-  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+  var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xeewrgrj';
 
   var form = document.getElementById('inquiryForm');
   var msgBox = document.getElementById('formMessage');
