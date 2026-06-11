@@ -23,7 +23,7 @@ Everything on the site is real content now except a few items below. This guide 
 - **Curated Difference band** — Crystal's own Zion Canyon panorama; trust line removed.
 - **Response promise** standardized to **24 hours** (lead, form subtitle, and the
   form's JS success message).
-- **SEO** title/description, **canonical domain** `curatedtravelbycrystal.com`
+- **SEO** title/description, **canonical domain** `curatedtravelsbycrystal.com`
   (`<head>` canonical + Open Graph + JSON-LD), trip-type dropdown alphabetized.
 - **Privacy + Terms** draft pages (`privacy.html` / `terms.html`).
 

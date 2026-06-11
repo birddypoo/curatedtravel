@@ -35,7 +35,7 @@ See `CHANGEME.md` for the authoritative, line-by-line list. Summary:
 - [ ] 🔴 **Test the form** end-to-end (real submit → confirm it lands in the inbox).
 - [ ] 🔴 **Deploy** via Cloudflare Pages (HTTPS) + attach the custom domain.
 - [ ] 🟠 **Replace the About portrait** — `images/egypt.jpeg` is still a placeholder.
-- [ ] 🟠 Confirm canonical domain (`curatedtravelbycrystal.com`) matches the Cloudflare domain.
+- [ ] 🟠 Confirm canonical domain (`curatedtravelsbycrystal.com`) matches the Cloudflare domain.
 - [ ] 🟠 Review Privacy/Terms drafts; view on a real phone.
 - [x] Destination + Curated-Difference imagery refreshed.
 - [x] Bio, testimonials, FAQ, services, socials (incl. TikTok), 24-hour promise.
