@@ -298,10 +298,16 @@ ul { list-style: none; }
 .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; position: relative; list-style: none; margin: 0; padding: 0; }
 .process-steps::before { content: ''; position: absolute; top: 31px; left: 12.5%; right: 12.5%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-lt) 18%, var(--gold-lt) 82%, transparent); }
 .step { text-align: center; position: relative; }
-.step-num { display: flex; align-items: center; justify-content: center; width: 62px; height: 62px; margin: 0 auto 22px; border: 1px solid var(--gold); border-radius: 50%; background: var(--cream); font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--gold-deep); position: relative; z-index: 1; transition: background .35s ease, color .35s ease, border-color .35s ease, transform .35s ease, box-shadow .35s ease; }
-.step:hover .step-num { background: var(--gold); border-color: var(--gold); color: var(--cream); transform: translateY(-4px); box-shadow: 0 10px 24px rgba(184,150,90,.28); }
-.step h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--espresso); margin-bottom: 12px; }
-.step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
+/* Base transitions carry a small delay + slightly longer duration: this is the
+   hover-OUT (settle-back) path, so cards eased past in a sweep don't snap. */
+.step.reveal { transition: opacity .9s var(--ease), transform .55s var(--ease) .12s; will-change: transform; }
+.step.reveal:hover { transition: transform .45s var(--ease); transform: translateY(-10px) scale(1.04); }
+.step-num { display: flex; align-items: center; justify-content: center; width: 62px; height: 62px; margin: 0 auto 22px; border: 1px solid var(--gold); border-radius: 50%; background: var(--cream); font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--gold-deep); position: relative; z-index: 1; transition: background .45s ease .12s, color .45s ease .12s, border-color .45s ease .12s, box-shadow .55s var(--ease) .12s; }
+.step:hover .step-num { transition: background .35s ease, color .35s ease, border-color .35s ease, box-shadow .45s var(--ease); background: var(--gold); border-color: var(--gold); color: var(--cream); box-shadow: 0 14px 30px rgba(184,150,90,.32); }
+.step h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--espresso); margin-bottom: 12px; transition: color .45s ease .12s, font-size .5s var(--ease) .12s; }
+.step:hover h3 { transition: color .35s ease, font-size .4s var(--ease); color: var(--gold-deep); font-size: 20px; }
+.step p { font-size: 14px; color: var(--muted); line-height: 1.7; transition: color .45s ease .12s, font-size .5s var(--ease) .12s; }
+.step:hover p { transition: color .35s ease, font-size .4s var(--ease); color: var(--espresso); font-size: 15.5px; }
 
 /* ─── PARALLAX DIFFERENCE BAND ─── */
 .difference { position: relative; padding: 150px 0; text-align: center; overflow: hidden; color: var(--white); }
