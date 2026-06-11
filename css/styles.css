@@ -296,10 +296,11 @@ ul { list-style: none; }
 
 /* ─── PROCESS ─── */
 .process { padding: var(--pad) 0; background: var(--ivory); }
-.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; position: relative; }
-.process-steps::before { content: ''; position: absolute; top: 30px; left: 12.5%; right: 12.5%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-lt), transparent); }
+.process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 36px; position: relative; list-style: none; margin: 0; padding: 0; }
+.process-steps::before { content: ''; position: absolute; top: 31px; left: 12.5%; right: 12.5%; height: 1px; background: linear-gradient(90deg, transparent, var(--gold-lt) 18%, var(--gold-lt) 82%, transparent); }
 .step { text-align: center; position: relative; }
-.step-num { display: flex; align-items: center; justify-content: center; width: 62px; height: 62px; margin: 0 auto 22px; border: 1px solid var(--gold); border-radius: 50%; background: var(--cream); font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--gold-deep); position: relative; z-index: 1; }
+.step-num { display: flex; align-items: center; justify-content: center; width: 62px; height: 62px; margin: 0 auto 22px; border: 1px solid var(--gold); border-radius: 50%; background: var(--cream); font-family: var(--serif); font-size: 24px; font-weight: 300; color: var(--gold-deep); position: relative; z-index: 1; transition: background .35s ease, color .35s ease, border-color .35s ease, transform .35s ease, box-shadow .35s ease; }
+.step:hover .step-num { background: var(--gold); border-color: var(--gold); color: var(--cream); transform: translateY(-4px); box-shadow: 0 10px 24px rgba(184,150,90,.28); }
 .step h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--espresso); margin-bottom: 12px; }
 .step p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
