@@ -12,6 +12,8 @@ Not yet connected to Cloudflare Pages — site is **not public** until we flip t
 
 | Date & Time (CDT)    | Short Hash | Tag | Description |
 |----------------------|------------|-----|-------------|
+| 2026-06-11 17:53     | `b0b4b81`  | —   | **Form copy fix + docs refresh.** Fixed the form's JS success message (48 → 24 hours) to match the rest of the site; rewrote `CHANGEME.md` to reflect the current state with an accurate going-live checklist (Formspree at `js/main.js` line 138, form dry-run steps, current photo inventory). |
+| 2026-06-11 17:50     | `70eef19`  | —   | **Polished "How It Works" step hover.** Whole step lifts + scales toward the viewer on hover; heading shrinks slightly while the paragraph grows and darkens (emphasis shifts to the description); asymmetric transitions — instant pop-in, delayed/slower settle-back so sweeping across steps doesn't snap or flicker. |
 | 2026-06-11 17:36     | `d1424c0`  | —   | **Personalized the Curated Difference band.** Replaced the stock pool background with Crystal's own Zion Canyon panorama (optimized 15 MB → 495 KB, 2560px wide); removed the "Virtuoso Member · 5-Star Rated · 50+ Journeys Curated" trust line from the band. |
 | 2026-06-11 17:23     | `1cad34b`  | —   | **Destinations overhaul + service image swap.** Replaced the uneven masonry with a uniform 3×2 landscape grid (removed the `dest-tall` row-span so all six tiles match). Refreshed the imagery with cohesive, warm-toned, commercially-licensed (Unsplash, no attribution) photos: Hawaii (aerial volcanic coast), Alaska (northern lights), Amalfi Coast, Paris (kept), Colorado (snow-capped Rockies), Puerto Rico (vibrant cove); retired Santorini, Bali, Serengeti, Bora Bora, and Maldives. In Services, swapped the photos on cards 02 and 03 (text unchanged). Hero, About, and parallax band untouched. |
 | 2026-06-11 16:07     | `94cddc9`  | —   | **Contact, testimonials & form refinements.** Centered testimonial cards on wide screens (`justify-content: safe center`, falls back to scrollable left-align when they overflow); changed contact heading "Begin Your Bespoke Journey" → "Begin Your Journey" with gold "Journey"; split "Follow Along" into per-network rows each with its own icon (Instagram, Facebook, TikTok); added the TikTok link in the contact list and as a footer icon; shortened the response promise from 48 → 24 hours (lead line + form subtitle); alphabetized the "Type of Trip" dropdown (kept "Other" last). |
@@ -27,11 +29,17 @@ Not yet connected to Cloudflare Pages — site is **not public** until we flip t
 
 ## Still To Do Before Launch
 
-- [ ] **Add real photos** — replace placeholder images in `/images`
-      (hero, destinations, services, feature shots).
-- [ ] A couple more small tweaks (TBD as we review).
-- [ ] Final content/proofread pass.
-- [ ] Connect repo to **Cloudflare Pages** and attach the custom domain → go live.
+See `CHANGEME.md` for the authoritative, line-by-line list. Summary:
+
+- [ ] 🔴 **Connect Formspree** — replace `YOUR_FORM_ID` in `js/main.js` line 138.
+- [ ] 🔴 **Test the form** end-to-end (real submit → confirm it lands in the inbox).
+- [ ] 🔴 **Deploy** via Cloudflare Pages (HTTPS) + attach the custom domain.
+- [ ] 🟠 **Replace the About portrait** — `images/egypt.jpeg` is still a placeholder.
+- [ ] 🟠 Confirm canonical domain (`curatedtravelbycrystal.com`) matches the Cloudflare domain.
+- [ ] 🟠 Review Privacy/Terms drafts; view on a real phone.
+- [x] Destination + Curated-Difference imagery refreshed.
+- [x] Bio, testimonials, FAQ, services, socials (incl. TikTok), 24-hour promise.
+- [ ] ⚪ Optional: phone number, newsletter provider.
 
 ---
 
