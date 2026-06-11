@@ -182,7 +182,7 @@
       function onSuccess() {
         var name = form.firstName.value.trim();
         showMessage('success', 'Thank you, <strong>' + name + '</strong>! Your inquiry has been received. ' +
-          'I\'ll personally reach out within 48 hours to begin planning your journey.');
+          'I\'ll personally reach out within 24 hours to begin planning your journey.');
         form.reset();
         btn.textContent = 'Inquiry Sent ✓';
       }

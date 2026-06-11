@@ -1,145 +1,110 @@
-# CHANGEME — Making the site yours
+# CHANGEME — Going-live guide
 
-Everything on the site ships with polished **placeholder** content so it looks finished out of the box. This guide shows you exactly what to swap before going live. You only need a text editor — open `index.html`, use Find (Ctrl/Cmd-F) for the text in quotes, and replace it.
+Everything on the site is real content now except a few items below. This guide lists
+**exactly what's left before launch**, with file names and line numbers.
 
-> Tip: work top-to-bottom through `index.html`. Each section is marked with a big comment like `<!-- ─── ABOUT ─── -->`.
-
----
-
-## ✅ Status — updated 2026-06-11
-
-Real info from `Curated.info.md` has been applied to the site.
-
-**Done & live in the page:** email, location (Dallas/Fort Worth, TX), Instagram + Facebook links · your bio · Est. 2025 badge · stats (30+/50+/12+) · trust bar (Virtuoso · ASTA · CLIA · IATA — Four Seasons removed) · all 5 real testimonials · FAQ answers (fee, specialties, budget) · services (Custom Vacation Planning · All-Inclusive & Cruises · Family & Group · Honeymoons & Celebrations) · SEO title/description · hero subtitle · process step · trip-type & budget dropdowns · Privacy + Terms draft pages (`privacy.html` / `terms.html`).
-
-**Still to do (pending your input):**
-- ☐ **Phone** — currently *hidden* (so no fake number shows). Send one to display it.
-- ☐ **Formspree ID** — form is in demo mode (shows success, sends no email yet).
-- ☐ **Photos** — still Unsplash placeholders; add yours to `images/` (portrait → `egypt.jpeg`).
-- ☐ **Destination card names** — deferred (your §7/§8 lists conflicted and are tied to images).
-- ☐ **Newsletter signup** — needs an email provider (Mailchimp / Flodesk / etc.).
-- ☐ **Review** the Privacy/Terms drafts before relying on them.
+> How to edit: open the file named, use Find (Ctrl/Cmd-F), replace the text, save.
 
 ---
 
-## 1. The essentials (current state)
+## 🚦 Status — updated 2026-06-11
 
-| What | Current value in the site | Status |
-|------|---------------------------|--------|
-| **Business email** | `Crystal.santiago@fora.travel` | ✅ done |
-| **Phone number** | hidden (commented out in Contact + removed from JSON-LD) | ⏳ add a number to show it |
-| **Location** | `Dallas/Fort Worth, Texas` | ✅ done |
-| **Instagram handle** | `@Unchartedwithcrystal` | ✅ done |
-| **Social links** | Instagram + Facebook (Pinterest removed) | ✅ done |
-| **Form delivery** | demo mode (`YOUR_FORM_ID`) | ⏳ add Formspree ID — see §4 |
-| **Domain** | `curatedtravelbycrystal.com` | ✅ in `<head>` |
+### ✅ Done & live in the page
+- **Contact:** email `Crystal.santiago@fora.travel`, location Dallas/Fort Worth TX.
+- **Socials:** Instagram, Facebook, **TikTok** — all `@unchartedwithcrystal` (in the
+  "Follow Along" list *and* the footer icons).
+- **Bio**, **Est. 2025** badge, **stats** (30+ countries / 50+ journeys / 12+ years).
+- **5 real testimonials**, **FAQ** answers (fee, specialties, budget).
+- **Services** (4 cards) + polished hover.
+- **"How It Works"** steps (Consultation / Design / Refine / Travel) with the lift +
+  shrink/expand hover.
+- **Destinations** — uniform 3×2 grid with 6 cohesive photos: Hawaii (volcanic),
+  Alaska (northern lights), Amalfi Coast, Paris, Colorado (Rockies), Puerto Rico.
+- **Curated Difference band** — Crystal's own Zion Canyon panorama; trust line removed.
+- **Response promise** standardized to **24 hours** (lead, form subtitle, and the
+  form's JS success message).
+- **SEO** title/description, **canonical domain** `curatedtravelbycrystal.com`
+  (`<head>` canonical + Open Graph + JSON-LD), trip-type dropdown alphabetized.
+- **Privacy + Terms** draft pages (`privacy.html` / `terms.html`).
 
----
-
-## 2. Written content
-
-| Section | What to edit (search text) |
-|---------|----------------------------|
-| **Page title / SEO** | `<title>` and `<meta name="description">` in `<head>` |
-| **Hero** | `Bespoke Luxury Travel`, the `Curated Travel / by Crystal` headline, and the subtitle starting `Extraordinary journeys…` |
-| **Trust bar** | the list items `VIRTUOSO`, `ASTA`, `CLIA`, `IATA`, `FOUR SEASONS PREFERRED` — use the consortia / partners you actually belong to (remove any you don't) |
-| **Intro quote** | `Every extraordinary journey begins…` |
-| **About — your bio** | the two paragraphs under `Hi, I'm Crystal` (currently placeholder prompts) |
-| **About — stats** | the `data-count` numbers `45`, `200`, `12` and their labels. These animate when scrolled into view |
-| **About — Est. year** | the badge over your photo: search `2014` |
-| **Destinations** | each card's region + name (e.g. `Mediterranean` / `Santorini, Greece`) |
-| **Services** | the four card titles + descriptions |
-| **Process** | the four steps (Consultation / Design / Refine / Travel) |
-| **Difference band** | `Your only job is to arrive.` + the line below |
-| **Testimonials** | replace the five sample quotes with **real client reviews** once you have them (these are written samples) |
-| **FAQ** | five questions + answers — fill in your real planning fee, specialties, lead time, and budget range |
-| **Contact** | the intro paragraph and the `48 hours` response promise |
-
----
-
-## 3. Photos
-
-All placeholder photos live in `images/` and are free to use under the **[Unsplash License](https://unsplash.com/license)**. Replace any of them by dropping in your own image with the **same filename** (keep it roughly the same shape).
-
-| File | Used for | Unsplash source (photo ID) |
-|------|----------|----------------------------|
-| `hero.jpg` | Hero background | `1507525428034-b723cf961d3e` |
-| `egypt.jpeg` | **Your portrait** in the About section — swap this for a photo of you | (your own) |
-| `feature-pool.jpg` | The "Your only job is to arrive" band | `1551918120-9739cb430c6d` |
-| `dest-santorini.jpg` | Destinations — tall card | `1533105079780-92b9be482077` |
-| `dest-maldives.jpg` | Destinations | `1573843981267-be1999ff37cd` |
-| `dest-paris.jpg` | Destinations | `1502602898657-3e91760cbb34` |
-| `dest-bali.jpg` | Destinations | `1537953773345-d172ccf13cf1` |
-| `dest-safari.jpg` | Destinations | `1535941339077-2dd1c7963098` |
-| `dest-borabora.jpg` | Destinations | `1505228395891-9a51e7e86bf6` |
-| `service-hotels.jpg` | Services 01 | `1540541338287-41700207dee6` |
-| `service-itineraries.jpg` | Services 02 | `1530789253388-582c481c54b0` |
-| `service-weddings.jpg` | Services 03 | `1571003123894-1f0594d2b5d9` |
-| `service-alacarte.jpg` | Services 04 | `1512100356356-de1b84283e18` |
-
-**Swap your portrait:** put a photo of yourself at `images/egypt.jpeg` (or add a new file and update the `src` in the About section). Portrait orientation (taller than wide) looks best.
-
-If you change a card's `alt` text too, keep it descriptive — it helps accessibility and SEO. Remember to also update the `<meta property="og:image">` in `<head>` if you change the hero.
+### ☐ Still to do before launch
+| # | Item | Where | Blocker? |
+|---|------|-------|----------|
+| 1 | **Connect Formspree** so the form emails you | `js/main.js` **line 138** | 🔴 YES |
+| 2 | **Test the form** end-to-end (real submit → inbox) | see §2 | 🔴 YES |
+| 3 | **Your portrait** — replace the Unsplash placeholder | `images/egypt.jpeg` | 🟠 strongly rec. |
+| 4 | **Deploy** via Cloudflare Pages over HTTPS | see `README.md` | 🔴 YES |
+| 5 | Confirm canonical domain matches your Cloudflare domain | `index.html` lines 9, 17, 45 | 🟠 |
+| 6 | **Phone** — currently hidden so no fake number shows | Contact `<li>` (commented) | ⚪ optional |
+| 7 | Review the Privacy/Terms drafts | `privacy.html` / `terms.html` | 🟠 |
+| 8 | View on a real phone, not just a resized browser | — | 🟠 |
+| 9 | Newsletter provider (if you want signups) | — | ⚪ optional |
 
 ---
 
-## 4. Form — where inquiries go
+## 1. Formspree — the one critical edit (so inquiries reach your inbox)
 
-The form works in **demo mode** right out of the box (it shows a success message but doesn't email anyone yet). Pick one of these to receive real inquiries:
+The form is in **demo mode**: it shows a success message but **emails no one yet**.
+The code auto-detects the real endpoint — you only change one line.
 
-### Option A — Formspree (recommended, free tier)
-1. Sign up at **[formspree.io](https://formspree.io)** and create a form. You'll get an ID like `xwkgabcd`.
-2. Open `js/main.js`, find:
-   ```js
-   var FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
-   ```
-   Replace `YOUR_FORM_ID` with your ID. That's it — the page auto-detects the real endpoint and starts sending.
+**Step 1.** Sign up at **[formspree.io](https://formspree.io)** (free tier), create a
+form, and copy your form ID (looks like `xwkgabcd`).
 
-### Option B — Plain email (mailto, zero signup)
-If you'd rather skip Formspree, change the form so it opens the visitor's email app. In `index.html`, change the opening form tag to:
-```html
-<form class="contact-form" id="inquiryForm" action="mailto:hello@youremail.com" method="post" enctype="text/plain">
+**Step 2.** Open **`js/main.js`** and edit **line 138**:
+```js
+var FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
 ```
-(Note: mailto is the simplest option but less reliable — it depends on the visitor having an email app set up. Formspree is smoother.)
-
-Either way, the **honeypot** anti-spam field is already in place — leave it.
-
----
-
-## 5. Optional: a video hero
-
-The hero is built to drop in a looping video later. In `index.html`, inside `<div class="hero-media">`, replace the `<img>` with:
-```html
-<video class="hero-img" autoplay muted loop playsinline poster="images/hero.jpg">
-  <source src="images/hero.mp4" type="video/mp4">
-</video>
+Replace `YOUR_FORM_ID` with your real ID, e.g.:
+```js
+var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xwkgabcd';
 ```
-Keep the file short (10–20s), muted, and compressed (a few MB max). The `poster` shows instantly while the video loads.
+That's it. The check on **line 198** sees the placeholder is gone and switches from
+demo mode to real sending (the `fetch` on **line 203**).
+
+> The honeypot anti-spam field (`website_url`) is already wired in — leave it.
 
 ---
 
-## 6. Going-live checklist
+## 2. Form dry-run test (do this before AND after going live)
 
-- [x] Email, location, social links (§1) — ☐ phone still pending
-- [~] Your bio ✅ — ☐ portrait photo still placeholder
-- [x] Real testimonials (your 5 reviews are in)
-- [ ] Formspree connected **and tested** (submit a real inquiry, confirm it lands in your inbox)
-- [x] FAQ answers reflect your actual policies
-- [x] Trust bar shows only consortia you truly belong to
-- [x] Domain in the `<head>` (canonical + Open Graph + JSON-LD)
-- [ ] Viewed on a real phone, not just a resized browser
-- [ ] Deployed over HTTPS (see `README.md`)
-- [ ] Review Privacy/Terms drafts; connect a newsletter provider
+The form requires: **First name, Last name, valid Email, Type of trip, and the message**.
+
+1. **In demo mode (now):** fill it out and submit — you should see the green
+   "Thank you, [name]!… within 24 hours" message and the button change to
+   "Inquiry Sent ✓". This confirms validation + UX work.
+2. **After adding your Formspree ID:** submit a real test inquiry. The **first**
+   Formspree submission triggers a confirmation email to verify your address —
+   click it. Then confirm the test lands in your inbox.
+3. Test the **error path**: leave a required field blank → it should list what's
+   missing and highlight the field.
 
 ---
 
-## Files
+## 3. Photos — current state
+
+Destination + band photos are done. **Only your portrait remains a placeholder.**
+
+| File | Used for | Status |
+|------|----------|--------|
+| `images/egypt.jpeg` | **Your portrait** (About section) | ⏳ replace with a real photo of you (portrait orientation looks best) |
+| `images/hero.jpg` | Hero background | Unsplash placeholder (fine to keep or swap) |
+| `images/difference-zion.jpg` | "Your only job is to arrive" band | ✅ your own Zion photo |
+| `images/dest-hawaii.jpg` · `dest-alaska.jpg` · `dest-amalfi.jpg` · `dest-paris.jpg` · `dest-colorado.jpg` · `dest-puertorico.jpg` | Destinations grid | ✅ cohesive Unsplash set (free for commercial use, no attribution) |
+| `images/service-*.jpg` (hotels, itineraries, weddings, alacarte) | Services cards | Unsplash placeholders (fine to keep) |
+
+To swap your portrait: save a photo of yourself as `images/egypt.jpeg` (same filename),
+or add a new file and update the `<img src>` in the About section.
+
+---
+
+## 4. Files
 
 | File | What it holds |
 |------|---------------|
 | `index.html` | All page content + structure |
-| `css/styles.css` | All colours, fonts, layout, animation |
-| `js/main.js` | Nav, reveals, count-ups, FAQ, form |
+| `css/styles.css` | Colors, fonts, layout, animation |
+| `js/main.js` | Nav, reveals, count-ups, FAQ, **form** (Formspree on line 138) |
 | `images/` | All photos |
-| `favicon.svg` | The little "C" browser-tab icon |
-| `README.md` | How to preview locally + deploy |
+| `privacy.html` / `terms.html` | Legal draft pages |
+| `final_tweaks.md` | Running log of changes + commit history |
+| `README.md` | Preview locally + deploy notes |
