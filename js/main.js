@@ -146,6 +146,11 @@
     msgBox.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'nearest' });
   }
   function validEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
 
   if (form) {
     form.addEventListener('submit', function (e) {
@@ -180,7 +185,7 @@
       btn.textContent = 'Sending…';
 
       function onSuccess() {
-        var name = form.firstName.value.trim();
+        var name = escapeHtml(form.firstName.value.trim());
         showMessage('success', 'Thank you, <strong>' + name + '</strong>! Your inquiry has been received. ' +
           'I\'ll personally reach out within 24 hours to begin planning your journey.');
         form.reset();

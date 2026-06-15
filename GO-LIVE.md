@@ -20,21 +20,16 @@ That's it. Three parts.
 
 ---
 
-## PART A — Set up the form (Formspree) 📬
+## PART A — Set up the form (Formspree) 📬 ✅ DONE
 
-The form looks like it works, but right now it doesn't actually email you yet.
-We fix that with a free service called Formspree.
+**This part is already finished.** The form is connected to a live Formspree form
+(ID `xeewrgrj`, wired into `js/main.js` line 138) and a connectivity test came back
+successful — Formspree accepted the submission.
 
-1. Go to **formspree.io** in your browser.
-2. Click **Sign Up** and make a free account (use your business email).
-3. Click **+ New Form**. Name it something like "Website Inquiries."
-4. It will show you a **Form ID** — a short code that looks like `xwkgabcd`
-   (or a web address ending in `/f/xwkgabcd`).
-5. **Copy that ID and send it to Claude.** Claude will paste it into the site
-   (one line: `js/main.js` line 138) and save it to GitHub.
-
-> You do NOT need to copy any code from Formspree. Just the short ID. Claude
-> handles the rest.
+The only thing left is to **confirm a test inquiry actually lands in your inbox**
+(Part B). The earlier `@fora.travel` problem was about the *recipient* address inside
+Formspree's dashboard — make sure the email Formspree delivers to is one that received
+and confirmed Formspree's verification email.
 
 ---
 
@@ -80,14 +75,20 @@ This connects your GitHub code to Cloudflare so the world can see it.
 
 ## PART D — Connect your real domain 🏷️
 
-Now we point `curatedtravelsbycrystal.com` at the site.
+Now we point your domain at the site. We use **`www.curatedtravelsbycrystal.com`**
+as the primary address (the "canonical" one), and the bare
+`curatedtravelsbycrystal.com` automatically redirects to it.
 
 1. Still in your Pages project, click the **Custom domains** tab.
 2. Click **Set up a custom domain**.
-3. Type **`curatedtravelsbycrystal.com`** and click **Continue** → **Activate domain**.
-4. Because the domain is already on Cloudflare, it sets everything up for you
-   automatically. (You may also add `www.curatedtravelsbycrystal.com` the same way.)
-5. Wait a few minutes. When it shows **Active**, type your domain into a browser —
+3. Type **`www.curatedtravelsbycrystal.com`** and click **Continue** → **Activate domain**.
+4. Click **Set up a custom domain** again and add the bare
+   **`curatedtravelsbycrystal.com`** too. (The `_redirects` file in the repo sends
+   anyone who types the bare domain to the `www` version automatically — so both work,
+   and Google only sees one.)
+5. Because the domain is already on Cloudflare, it sets everything up for you
+   automatically.
+6. Wait a few minutes. When both show **Active**, type your domain into a browser —
    your site loads, with the secure 🔒 lock (HTTPS). **You are LIVE.** 🥳
 
 ---

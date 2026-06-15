@@ -30,15 +30,19 @@ Everything on the site is real content now except a few items below. This guide 
 ### ☐ Still to do before launch
 | # | Item | Where | Blocker? |
 |---|------|-------|----------|
-| 1 | **Connect Formspree** so the form emails you | `js/main.js` **line 138** | 🔴 YES |
-| 2 | **Test the form** end-to-end (real submit → inbox) | see §2 | 🔴 YES |
+| 1 | ✅ **Connect Formspree** (ID `xeewrgrj`) — endpoint tested, returns `ok:true` | `js/main.js` line 138 | ✅ done |
+| 2 | **Confirm a test inquiry lands in your inbox** (verify Formspree recipient email) | see §2 | 🔴 YES |
 | 3 | **Your portrait** — replace the Unsplash placeholder | `images/egypt.jpeg` | 🟠 strongly rec. |
-| 4 | **Deploy** via Cloudflare Pages over HTTPS | see `README.md` | 🔴 YES |
-| 5 | Confirm canonical domain matches your Cloudflare domain | `index.html` lines 9, 17, 45 | 🟠 |
+| 4 | **Deploy** via Cloudflare Pages over HTTPS | see `GO-LIVE.md` Part C | 🔴 YES |
+| 5 | ✅ Canonical = `www.curatedtravelsbycrystal.com`; `_redirects` sends bare→www | `index.html` + `_redirects` | ✅ done |
 | 6 | **Phone** — currently hidden so no fake number shows | Contact `<li>` (commented) | ⚪ optional |
 | 7 | Review the Privacy/Terms drafts | `privacy.html` / `terms.html` | 🟠 |
 | 8 | View on a real phone, not just a resized browser | — | 🟠 |
 | 9 | Newsletter provider (if you want signups) | — | ⚪ optional |
+
+**Deploy helper files added** (`2026-06-14`): `_redirects` (bare→www 301), `_headers`
+(security + caching), `robots.txt`, `sitemap.xml`, `404.html`. These ship as-is to
+Cloudflare Pages — no configuration needed.
 
 ---
 
