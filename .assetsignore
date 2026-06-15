@@ -1,0 +1,19 @@
+# Files Cloudflare must NEVER serve publicly.
+# (Workers static-assets uses the repo root as the asset dir, so exclude internals.)
+
+# Version control — exposing this leaks full source + history
+.git
+.git/**
+
+# Build/tooling internals
+.wrangler
+.wrangler/**
+node_modules
+node_modules/**
+wrangler.jsonc
+wrangler.toml
+.gitignore
+.assetsignore
+
+# Internal project docs — not meant for the public web
+*.md
