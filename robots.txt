@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.curatedtravelsbycrystal.com/sitemap.xml
+Sitemap: https://curatedtravelsbycrystal.com/sitemap.xml
