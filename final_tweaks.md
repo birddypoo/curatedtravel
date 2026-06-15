@@ -34,7 +34,7 @@ See `CHANGEME.md` for the authoritative, line-by-line list. Summary:
 - [ ] 🔴 **Connect Formspree** — replace `YOUR_FORM_ID` in `js/main.js` line 138.
 - [ ] 🔴 **Test the form** end-to-end (real submit → confirm it lands in the inbox).
 - [ ] 🔴 **Deploy** via Cloudflare Pages (HTTPS) + attach the custom domain.
-- [ ] 🟠 **Replace the About portrait** — `images/egypt.jpeg` is still a placeholder.
+- [x] **About portrait** — `images/egypt.jpeg` is Crystal's real photo; keeping as-is.
 - [ ] 🟠 Confirm canonical domain (`curatedtravelsbycrystal.com`) matches the Cloudflare domain.
 - [ ] 🟠 Review Privacy/Terms drafts; view on a real phone.
 - [x] Destination + Curated-Difference imagery refreshed.

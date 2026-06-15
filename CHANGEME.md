@@ -32,7 +32,7 @@ Everything on the site is real content now except a few items below. This guide 
 |---|------|-------|----------|
 | 1 | ✅ **Connect Formspree** (ID `xeewrgrj`) — endpoint tested, returns `ok:true` | `js/main.js` line 138 | ✅ done |
 | 2 | **Confirm a test inquiry lands in your inbox** (verify Formspree recipient email) | see §2 | 🔴 YES |
-| 3 | **Your portrait** — replace the Unsplash placeholder | `images/egypt.jpeg` | 🟠 strongly rec. |
+| 3 | ✅ **Your portrait** — real photo of Crystal, kept as-is | `images/egypt.jpeg` | ✅ done |
 | 4 | **Deploy** via Cloudflare Pages over HTTPS | see `GO-LIVE.md` Part C | 🔴 YES |
 | 5 | ✅ Canonical = `www.curatedtravelsbycrystal.com`; `_redirects` sends bare→www | `index.html` + `_redirects` | ✅ done |
 | 6 | **Phone** — currently hidden so no fake number shows | Contact `<li>` (commented) | ⚪ optional |
@@ -86,11 +86,11 @@ The form requires: **First name, Last name, valid Email, Type of trip, and the m
 
 ## 3. Photos — current state
 
-Destination + band photos are done. **Only your portrait remains a placeholder.**
+Destination + band photos are done, and the portrait is Crystal's real photo. **All photos are final.**
 
 | File | Used for | Status |
 |------|----------|--------|
-| `images/egypt.jpeg` | **Your portrait** (About section) | ⏳ replace with a real photo of you (portrait orientation looks best) |
+| `images/egypt.jpeg` | **Your portrait** (About section) | ✅ real photo of Crystal — keeping as-is |
 | `images/hero.jpg` | Hero background | Unsplash placeholder (fine to keep or swap) |
 | `images/difference-zion.jpg` | "Your only job is to arrive" band | ✅ your own Zion photo |
 | `images/dest-hawaii.jpg` · `dest-alaska.jpg` · `dest-amalfi.jpg` · `dest-paris.jpg` · `dest-colorado.jpg` · `dest-puertorico.jpg` | Destinations grid | ✅ cohesive Unsplash set (free for commercial use, no attribution) |
