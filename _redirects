@@ -1,3 +1,13 @@
-# Cloudflare Pages redirects
-# Force the bare domain to the canonical www host (matches <link rel="canonical">).
-https://curatedtravelsbycrystal.com/* https://www.curatedtravelsbycrystal.com/:splat 301!
+# Cloudflare Workers static-assets _redirects.
+#
+# NOTE: Unlike Cloudflare Pages, the Workers static-assets runtime only allows
+# RELATIVE (path-only) redirects here. Host-to-host redirects (e.g. forcing the
+# bare domain to www) are NOT permitted in this file on Workers and will fail the
+# build with: "Only relative URLs are allowed [code: 100324]".
+#
+# The bare-domain -> www canonicalization is instead handled by a Cloudflare
+# Redirect Rule in the dashboard (Rules -> Redirect Rules). The canonical host is
+# also declared via <link rel="canonical"> in index.html.
+#
+# Add any path-only redirects below, e.g.:
+#   /old-page /new-page 301

@@ -83,9 +83,10 @@ as the primary address (the "canonical" one), and the bare
 2. Click **Set up a custom domain**.
 3. Type **`www.curatedtravelsbycrystal.com`** and click **Continue** → **Activate domain**.
 4. Click **Set up a custom domain** again and add the bare
-   **`curatedtravelsbycrystal.com`** too. (The `_redirects` file in the repo sends
-   anyone who types the bare domain to the `www` version automatically — so both work,
-   and Google only sees one.)
+   **`curatedtravelsbycrystal.com`** too, so both addresses resolve. (To make the bare
+   domain *redirect* to `www`, add a **Redirect Rule** later: dashboard → your domain →
+   **Rules → Redirect Rules**. Not required for launch — `<link rel="canonical">`
+   already tells Google `www` is the real one.)
 5. Because the domain is already on Cloudflare, it sets everything up for you
    automatically.
 6. Wait a few minutes. When both show **Active**, type your domain into a browser —
